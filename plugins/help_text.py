@@ -49,7 +49,8 @@ async def start(bot, update):
     TRChatBase(update.from_user.id, update.text, "/start")
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT,
-        reply_to_message_id=update.message_id
-    )
+        text="welcome to rename bot",
+        #reply_to_message_id=update.message_id
+         reply_markup=InlineKeybordMarkup([[InlineKeyboardButton('Test Button',url='https://t.me/tg_botz')]])
+          )
 
