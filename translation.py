@@ -56,7 +56,7 @@ Channel:-© @TG_BotZ
 
 /start - ```Checking Bot Online```
 /help - ```How To Use Me```
-/rename - ```For Rename File``
+/rename - ```For Rename File```
 /deletethumbnail - ```Delete Your Saved Thumbnail```
 /plan - ```Your Plan Details```
 /about - ```More About Me```"""
