@@ -49,9 +49,7 @@ Channel:-© @TG_BotZ
  **Hei, Follow These steps..**
     
 1.Send file
-
 2.Send custom Thumbnail
-
 3.Reply the file - /rename ```New Name.mkv```
 
 **Available Commands**
