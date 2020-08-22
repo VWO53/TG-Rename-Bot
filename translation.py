@@ -59,9 +59,7 @@ Channel:-© @TG_BotZ
 /rename - ```For Rename File``
 /deletethumbnail - ```Delete Your Saved Thumbnail```
 /plan - ```Your Plan Details```
-/about - ```More About Me```
-
-Channel:-© @TG_BotZ"""
+/about - ```More About Me```"""
 
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.."
     ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
