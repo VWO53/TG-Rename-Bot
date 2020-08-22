@@ -48,15 +48,21 @@ Channel:-© @TG_BotZ
     HELP_USER = """
  **Hei, Follow These steps..**
     
-**1.Send file**
+1.Send file
 
-**2.Send custom Thumbnail**
+2.Send custom Thumbnail
 
-**3.Reply the file - /rename New Name.mkv**
+3.Reply the file - /rename ```New Name.mkv```"""
 
- -----------------------------------
+**Available Commands**
 
- Channel:© @TG_BotZ"""
+/start - ```Checking Bot Online```
+/help - ```How To Use Me```
+/rename - ```For Rename File``
+/deletethumbnail - ```Delete Your Saved Thumbnail```
+/about - ```More About Me```
+
+Channel:-© @TG_BotZ"""
 
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to `/rename New Name.extension` with custom thumbnail support.."
     ABUSIVE_USERS = "You are not allowed to use this bot. If you think this is a mistake, please check /me to remove this restriction."
