@@ -58,6 +58,7 @@ Channel:-© @TG_BotZ
 /help - ```How To Use Me```
 /rename - ```For Rename File``
 /deletethumbnail - ```Delete Your Saved Thumbnail```
+/plan - ```Your Plan Details```
 /about - ```More About Me```
 
 Channel:-© @TG_BotZ"""
