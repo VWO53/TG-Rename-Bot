@@ -45,14 +45,14 @@ Channel:-© @TG_BotZ
     CUSTOM_CAPTION_UL_FILE = "**Renamed By @TGRename_Bot**"
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found."
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
-    HELP_USER = """
+    HELP_USER ="""
  **Hei, Follow These steps..**
     
 1.Send file
 
 2.Send custom Thumbnail
 
-3.Reply the file - /rename ```New Name.mkv```"""
+3.Reply the file - /rename ```New Name.mkv```
 
 **Available Commands**
 
