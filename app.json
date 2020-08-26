@@ -8,9 +8,9 @@
     "source",
     "Rename"
   ],
-  "success_url": "https://telegram.dog/AnyDLBot",
-  "website": "https://github.com/SpEcHiDe/AnyDLBot",
-  "repository": "https://github.com/erichdanikeninfo/TG-Rename-Bot",
+  "success_url": "https://t.me/Mai_bOTs",
+  "website": "https://github.com/No-OnE-Kn0wS-Me",
+  "repository": "https://github.com/No-OnE-Kn0wS-Me/Renamebot",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -24,6 +24,10 @@
       "description": "Your chat base token, as a string.",
       "value": ""
     },
+    "CHANNEL_ID": {
+      "description": "Create a channel And Added The Id Here With The Hypothesis",
+      "value": ""
+    },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
@@ -34,7 +38,7 @@
     },
     "AUTH_USERS": {
       "description": "allow only pre-defined users to use this bot",
-      "value": "7351948 466337795"
+      "value": ""
     },
     "BANNED_USERS": {
       "description": "Banned Unwanted members..",
