@@ -12,7 +12,7 @@ class Config(object):
     # Array to store users who are authorized to use the bot
     AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
     # Banned Unwanted Members..
-    BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
+    BANNED_USERS = []
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     # Telegram maximum file upload size
@@ -34,5 +34,7 @@ class Config(object):
     PROCESS_MAX_TIMEOUT = 3600
     # watermark file
     DEF_WATER_MARK_FILE = ""
-    # Sql Database url By [Aiden]
+    # Database url
     DB_URI = os.environ.get("DATABASE_URL", "")
+    CHANNEL_ID = os.environ.get("CHANNEL_ID", -1001400306304)
+   
