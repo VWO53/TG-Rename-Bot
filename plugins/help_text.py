@@ -51,6 +51,6 @@ async def start(bot, update):
         chat_id=update.chat.id,
         text="welcome to rename bot",
         #reply_to_message_id=update.message_id
-         reply_markup=InlineKeybordMarkup([[InlineKeyboardButton('Test Button',url='https://t.me/tg_botz')]])
+        reply_markup=InlineKeybordMarkup([[InlineKeyboardButton('Test Button',url='https://t.me/tg_botz')]])
           )
 
