@@ -74,25 +74,26 @@ async def start(bot,update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('📌 Support Channel', url='https://t.me/tg_botz'),
-                    InlineKeyboardButton('✅ Feedback', url='https://t.me/lNS4N3')
+                    InlineKeyboardButton('Support Channel ♋️', url='https://t.me/Mai_bOTs'),
+                    InlineKeyboardButton('Feedback ♉️', url='https://t.me/No_OnE_Kn0wS_Me')
                 ],
                 [
-                    InlineKeyboardButton('➕ Other Bots', url='https://t.me/')
+                    InlineKeyboardButton('Other Bots ™️', url='https://t.me/Mai_bOTs/17'),
+                    InlineKeyboardButton('Help ❔', url="t.me/{}?start=help".format(bot.username')
                 ]
             ]
         ),
         reply_to_message_id=update.message_id
     )
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["plan"]))
+@pyrogram.Client.on_message(pyrogram.Filters.command(["upgrade"]))
 async def upgrade(bot, update):
     # logger.info(update)
-    TRChatBase(update.from_user.id, update.text, "/plan")
+    TRChatBase(update.from_user.id, update.text, "/upgrade")
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.UPGRADE_TEXT,
         parse_mode="html",
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True
-    )
+    ) 
