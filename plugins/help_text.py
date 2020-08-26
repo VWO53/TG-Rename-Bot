@@ -74,11 +74,11 @@ async def start(bot,update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/tg_botz'),
-                    InlineKeyboardButton('Feedback', url='https://t.me/lNS4N3')
+                    InlineKeyboardButton('📌 Support Channel', url='https://t.me/tg_botz'),
+                    InlineKeyboardButton('✅ Feedback', url='https://t.me/lNS4N3')
                 ],
                 [
-                    InlineKeyboardButton('Other Bots', url='https://t.me/')
+                    InlineKeyboardButton('➕ Other Bots', url='https://t.me/')
                 ]
             ]
         ),
