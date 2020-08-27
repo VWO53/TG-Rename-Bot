@@ -5,8 +5,6 @@ class Translation(object):
 
 **Do one By One rename. Otherwise you will get Permenent Ban**
 
-Channel:-© @TG_BotZ
-
 /help for more details.."""
 
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
