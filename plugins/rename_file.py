@@ -38,7 +38,7 @@ async def rename_doc(bot, update):
     user_id = update.from_user.id
 
     check_status = await bot.get_chat_member(
-        "-1001256560497", 
+        "-1001232481571", 
         user_id=user_id
     )
     admin_strings = [
