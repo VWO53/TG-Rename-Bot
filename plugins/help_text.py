@@ -62,6 +62,8 @@ async def about_meh(bot, update):
 
 @Client.on_message(Filters.private & Filters.command("start") & Filters.text)
 async def start(bot,update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/start") 
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(update.from_user.first_name),
