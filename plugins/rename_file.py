@@ -31,13 +31,28 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
-from database.database import *
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D")
+    user_id = update.from_user.id
+
+    check_status = await bot.get_chat_member(
+        "-1001256560497", 
+        user_id=user_id
+    )
+    admin_strings = [
+        "member"
+    ]
+    if check_status.status not in admin_strings:
+        await bot.send_message("Join Channel")
+        return
+    elif update.from_user.id in Config.BANNED_USERS:
+        await bot.delete_messages(
+            chat_id=update.chat.id,
+            message_ids=update.message_id,
+            revoke=True
+        )
         return
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
@@ -87,13 +102,7 @@ async def rename_doc(bot, update):
             logger.info(the_real_download_location)
             thumb_image_path = Config.DOWNLOAD_LOCATION + "/" + str(update.from_user.id) + ".jpg"
             if not os.path.exists(thumb_image_path):
-                mes = await get_thumb(update.from_user.id)
-                if mes != None:
-                    m = await bot.get_messages(update.chat.id, mes.msg_id)
-                    await m.download(file_name=thumb_image_path)
-                    thumb_image_path = thumb_image_path
-                else:
-                    thumb_image_path = None
+                thumb_image_path = None
             else:
                 width = 0
                 height = 0
@@ -129,7 +138,7 @@ async def rename_doc(bot, update):
             )
             try:
                 os.remove(new_file_name)
-                os.remove(thumb_image_path)
+               # os.remove(thumb_image_path)
             except:
                 pass
             await bot.edit_message_text(
