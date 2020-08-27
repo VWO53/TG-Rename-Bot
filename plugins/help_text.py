@@ -78,7 +78,7 @@ async def start(bot,update):
                     InlineKeyboardButton('🤧 Report Bugs', url='https://t.me/lNS4N3')
                 ],
                 [
-                    InlineKeyboardButton('✔️ Other Bots', url='https://t.me/TG_Botz/33'),
+                    InlineKeyboardButton('✅ Other Bots', url='https://t.me/TG_Botz/33'),
                 ]
             ]
         ),
