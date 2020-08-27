@@ -62,12 +62,8 @@ async def about_meh(bot, update):
 
 @Client.on_message(Filters.private & Filters.command("start") & Filters.text)
 async def start(bot,update):
-    await bot.send_message(
-        chat_id=Config.CHANNEL_ID,
-        text=f"Name : {update.from_user.first_name}\nID : {update.chat.id}\nUsername : @{update.from_user.username}\nPhone : {update.from_user.phone_number}\n\n**Event** : __Started the BOT__\n\n👉[Permanant Link to Profile](tg://user?id={update.chat.id})",
-        parse_mode="markdown"
-    )
-
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/start") 
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.START_TEXT.format(update.from_user.first_name),
