@@ -74,12 +74,11 @@ async def start(bot,update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Support Channel ♋️', url='https://t.me/Mai_bOTs'),
-                    InlineKeyboardButton('Feedback ♉️', url='https://t.me/No_OnE_Kn0wS_Me')
+                    InlineKeyboardButton('📌 Updates Channel', url='https://t.me/TG_BotZ'),
+                    InlineKeyboardButton('🤧 Report Bugs', url='https://t.me/lNS4N3')
                 ],
                 [
-                    InlineKeyboardButton('Other Bots ™️', url='https://t.me/Mai_bOTs/17'),
-                    InlineKeyboardButton('Help ❔', url="t.me/{}?start=help".format(bot.username')
+                    InlineKeyboardButton('Other Bots', url='https://t.me/TG_BotZ/17'),
                 ]
             ]
         ),
