@@ -50,7 +50,9 @@ async def rename_doc(bot, update):
     
        expect UserNotParticipent:
            if edit_message: 
-              button
+              button = [[InlineKeyboardButton('join Channel', url=https://t.me/tg_Botz))]]
+              markup = InlineKeybordMarkup(button)
+              await reply("""Please Join"""reply_markup=markup)
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
