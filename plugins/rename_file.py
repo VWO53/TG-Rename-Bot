@@ -48,7 +48,7 @@ async def rename_doc(bot, update):
            if edit_message: 
               button = [[InlineKeyboardButton('join Channel', url='https://t.me/tg_Botz')]]
               markup = InlineKeybordMarkup(button)
-              await reply("""Please Join"""reply_markup=markup) 
+              await reply("""Please Join""" reply_markup=markup) 
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
     TRChatBase(update.from_user.id, update.text, "rename")
