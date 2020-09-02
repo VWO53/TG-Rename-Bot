@@ -36,9 +36,6 @@ from database.database import *
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    if update.from_user.id in Config.BANNED_USERS:
-        await update.reply_text("You are B A N N E D")
-        return
        try:
           chat = await bot.get_chat_member(CHANNEL_USERNAME, chat.id)
           if chat.status == 'kicked' :
@@ -52,7 +49,9 @@ async def rename_doc(bot, update):
            if edit_message: 
               button = [[InlineKeyboardButton('join Channel', url=https://t.me/tg_Botz))]]
               markup = InlineKeybordMarkup(button)
-              await reply("""Please Join"""reply_markup=markup)
+              await reply("""Please Join"""reply_markup=markup) 
+    if update.from_user.id in Config.BANNED_USERS:
+        await update.reply_text("You are B A N N E D")
     TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
