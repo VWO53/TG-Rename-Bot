@@ -42,7 +42,7 @@ async def rename_doc(bot, update):
              if edit_messages:
                 await reply('you are banned')
              return False
-                else :
+                else:
                    return True
     
        expect UserNotParticipent:
