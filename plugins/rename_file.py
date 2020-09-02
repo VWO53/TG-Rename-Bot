@@ -41,10 +41,7 @@ async def rename_doc(bot, update):
           if chat.status == 'kicked' :
              if edit_messages:
                 await reply('you are banned')
-             return False
-                else:
-                   return True
-    
+             return
        expect UserNotParticipent:
            if edit_message: 
               button = [[InlineKeyboardButton('join Channel', url=https://t.me/tg_Botz))]]
