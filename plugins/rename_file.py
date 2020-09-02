@@ -46,7 +46,7 @@ async def rename_doc(bot, update):
              return True
        except UserNotParticipent:
            if edit_message: 
-              button = [[InlineKeyboardButton('join Channel', url=https://t.me/tg_Botz)]]
+              button = [[InlineKeyboardButton('join Channel', url='https://t.me/tg_Botz')]]
               markup = InlineKeybordMarkup(button)
               await reply("""Please Join"""reply_markup=markup) 
     if update.from_user.id in Config.BANNED_USERS:
