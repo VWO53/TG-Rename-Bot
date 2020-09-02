@@ -44,7 +44,7 @@ async def rename_doc(bot, update):
              return False
           else:
              return True
-       expect UserNotParticipent:
+        expect UserNotParticipent:
            if edit_message: 
               button = [[InlineKeyboardButton('join Channel', url=https://t.me/tg_Botz))]]
               markup = InlineKeybordMarkup(button)
