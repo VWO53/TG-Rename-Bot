@@ -34,7 +34,7 @@ from PIL import Image
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
-async def rename_doc(bot, update)
+async def rename_doc(bot, update): 
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are B A N N E D")
         return 
