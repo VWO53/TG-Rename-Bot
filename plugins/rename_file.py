@@ -35,15 +35,23 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
 async def rename_doc(bot, update):
-    user_id = update.from_user.id
-
-    check_status = await bot.get_chat_member(
-        "-1001232481571", 
-        user_id=user_id
-    )
-    admin_strings = [
-        "member"
-    ]
+    chat_id = message.chat.id
+  chat_db = sql.fs_settings(chat_id)
+  if chat_db:
+    user_id = message.from_user.id
+    if not client.get_chat_member(chat_id, user_id).status in ("administrator", "creator") and not user_id in Config.SUDO_USERS:
+      channel = chat_db.channel
+      try:
+        client.get_chat_member(channel, user_id)
+      except UserNotParticipant:
+        try:
+          sent_message = message.reply_text(
+              "{}, you are **not subscribed** to my [channel](https://t.me/{}) yet. Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(message.from_user.mention, channel, channel),
+              disable_web_page_preview=True,
+              reply_markup=InlineKeyboardMarkup(
+                  [[InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]]
+              )
+          ) 
     if check_status.status not in admin_strings:
         await bot.send_message("text=Join Channel")
         return
