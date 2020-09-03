@@ -39,7 +39,6 @@ async def rename_doc(bot, update):
         await update.reply_text("You are B A N N E D")
         return 
       try:
-        client.get_chat_member(channel, user_id)
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
