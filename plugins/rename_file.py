@@ -34,13 +34,7 @@ from PIL import Image
 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["rename"]))
-async def rename_doc(bot, update):
-    chat_id = message.chat.id
-  chat_db = sql.fs_settings(chat_id)
-  if chat_db:
-    user_id = message.from_user.id
-    if not client.get_chat_member(chat_id, user_id).status in ("administrator", "creator") and not user_id in Config.SUDO_USERS:
-      channel = chat_db.channel
+async def rename_doc(bot, update)
       try:
         client.get_chat_member(channel, user_id)
       except UserNotParticipant:
