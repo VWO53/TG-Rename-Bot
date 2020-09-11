@@ -45,8 +45,16 @@ async def help_user(bot, update):
     await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.HELP_USER,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('📌  Updates Channel', url='https://t.me/TG_BotZ'),
+                    InlineKeyboardButton('✅ Other Bots', url='https://t.me/TG_BotZ/33')
+                ]
+            ]
+        ),
         reply_to_message_id=update.message_id
-    )
+    ) 
 
 @pyrogram.Client.on_message(pyrogram.Filters.command(["about"]))
 async def about_meh(bot, update):
